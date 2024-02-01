@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.poetry]
+name = "taskmux"
+version = "0.1.0"
+description = "A tmux session manager for running and monitoring tasks."
+authors = [
+    {name = "Siddharth Muralee", email = "smuralee@purdue.edu"}
+]
+license = {file = "LICENSE"}
+keywords = ["tmux", "task", "session", "manager"]
+requires-python = ">=3"
+
+[project.urls]
+homepage = "https://github.com/R3x/taskmux"
+documentation = "https://github.com/R3x/taskmux"
+repository = "https://github.com/R3x/taskmux"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+rich = "^10.0.0"
+pyyaml = "^5.4"
+tmuxp = "^1.9.2"
+flask = "^1.1.2"
+
+[tool.poetry.optional-dependencies]
+dev = [
+    "black",
+    "isort",
+    "pre-commit"
+]
+
+[tool.isort]
+profile = "black"
+force_to_top = ["typing"]
+from_first = true
+skip = ["__init__.py"]
+
+[tool.poetry.scripts]
+taskmux = "taskmux.__main__:main"
+taskmux-client = "taskmux.client:main"
