@@ -49,4 +49,5 @@ In 4 different panes of the session named `job2`.
 Finally, `job3` will run 4 commands in parallel, each with the same command.
     - echo "Hello"
     - echo "World"
+
 In 4 different panes of the session named `job3`.
